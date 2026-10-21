@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "voxeval"
+version = "0.1.0"
+description = "Modular, fully automated, open-source evaluation for text-to-speech systems"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dependencies = [
+  "numpy",
+  "scipy",
+  "soundfile",
+  "pyyaml",
+  "pydantic>=2",
+  "typer>=0.12",
+  "pandas",
+  "pyloudnorm",
+  "tqdm",
+  "requests",
+]
+
+[project.optional-dependencies]
+asr = ["faster-whisper>=1.0", "jiwer>=3", "whisper-normalizer"]
+sim = ["torch", "torchaudio", "speechbrain>=1.0"]
+mos = ["torch", "torchaudio"]
+prosody = ["librosa"]
+emotion = ["funasr", "torch", "torchaudio"]
+judge = ["torch", "transformers>=4.50", "accelerate"]
+ui = ["streamlit>=1.50"]
+voices = ["huggingface_hub", "pyarrow"]
+all = ["voxeval[asr,sim,mos,prosody,emotion,ui,voices]"]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+voxeval = "voxeval.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/voxeval"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B008", "B007"]  # long strings; typer idiom; unused loop var
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

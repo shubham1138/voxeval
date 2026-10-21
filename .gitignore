@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+runs/
+voices/
+*.wav
+!tests/**/*.wav
+.env
+.venv-*/
+
+# LinkedIn article drafts and images (not part of the project)
+docs/blog/
