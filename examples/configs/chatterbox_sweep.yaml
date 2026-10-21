@@ -1,0 +1,25 @@
+# A fuller parameter sweep: 3 x 3 grid = 9 variants over every built-in language.
+# Use `profile: gpu` for publication-comparable numbers (Whisper-large-v3 + judge).
+name: chatterbox-sweep
+profile: laptop
+adapter: examples/adapters/chatterbox_adapter.py:ChatterboxAdapter
+adapter_args: {model: multilingual}
+
+suite: {name: core, per_category: 2}          # all languages, 2 prompts per category
+voices: {dir: voices}                          # voxeval fetch-voices --lang en/es/fr/de
+
+sweep:
+  exaggeration: [0.3, 0.5, 0.8]
+  cfg_weight: [0.2, 0.5, 0.8]
+
+gates:
+  - {field: wer, op: "<=", value: 0.05}
+  - {field: mos, op: ">=", value: 3.5}
+  - {field: sim, op: ">=", value: 0.5}
+  - {field: clipping_ratio, op: "<=", value: 0.001}
+  - {field: is_empty, op: "==", value: 0}
+  - {field: robust_fail, op: "==", value: 0}
+
+composite:
+  weights: {wer: 0.3, mos: 0.3, sim: 0.2, judge_overall: 0.2}
+output_dir: runs

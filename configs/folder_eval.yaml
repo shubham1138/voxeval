@@ -1,0 +1,16 @@
+# Score audio you already generated, from ANY TTS (closed API, internal service, another team).
+# 1. put clips in a folder, named <prompt id>.wav
+# 2. describe the prompts in a suite file (id, text, language; optional category, ref_audio)
+name: my-tts
+profile: laptop
+adapter: folder
+adapter_args:
+  root: ./my_audio
+  voice_cloning: false          # true if each prompt row has a `ref_audio` to compare against
+
+suite: {path: ./my_prompts.jsonl}   # {"id": "a1", "text": "Hello there", "language": "en"}
+# metrics: [signal, intelligibility, naturalness]   # optional; default = whole profile
+gates:
+  - {field: wer, op: "<=", value: 0.05}
+  - {field: mos, op: ">=", value: 3.5}
+output_dir: runs

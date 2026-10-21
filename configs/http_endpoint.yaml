@@ -1,0 +1,16 @@
+# Evaluate any HTTP TTS endpoint. Secrets come from your environment: ${NAME} is expanded at call time.
+# voxeval itself needs no API key: only YOUR endpoint might.
+name: my-endpoint
+profile: laptop
+adapter: http
+adapter_args:
+  url: https://tts.internal.example.com/v1/speech
+  headers: {Authorization: "Bearer ${TTS_API_KEY}"}
+  body: {input: "{text}", language: "{language}", speed: "{speed}"}   # {param} placeholders
+  response: {type: audio}                 # or {type: json_base64, path: audio_base64}
+  languages: [en, es, fr, de]
+  params: {speed: {type: float, min: 0.5, max: 2.0, default: 1.0}}
+
+suite: {name: en_core, per_category: 3}
+sweep: {speed: [0.9, 1.0, 1.1]}
+output_dir: runs

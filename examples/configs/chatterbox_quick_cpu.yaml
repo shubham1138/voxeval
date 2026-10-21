@@ -1,0 +1,21 @@
+# Tiny end-to-end check that runs on a laptop CPU (a few minutes, after model downloads).
+# Run from the repo root, in the venv that has chatterbox-tts installed:
+#   voxeval fetch-voices --lang en --n 2
+#   voxeval run examples/configs/chatterbox_quick_cpu.yaml
+name: chatterbox-quick
+profile: laptop
+adapter: examples/adapters/chatterbox_adapter.py:ChatterboxAdapter
+adapter_args: {model: multilingual}
+
+suite: {name: en_core, per_category: 1, categories: [short, numbers, question], limit: 3}
+voices: {dir: voices}
+
+sweep:
+  exaggeration: [0.3, 0.8]
+
+gates:
+  - {field: wer, op: "<=", value: 0.1}
+  - {field: mos, op: ">=", value: 3.0}
+  - {field: sim, op: ">=", value: 0.4}
+  - {field: is_empty, op: "==", value: 0}
+output_dir: runs
