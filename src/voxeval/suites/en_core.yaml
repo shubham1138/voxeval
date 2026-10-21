@@ -1,0 +1,122 @@
+# Built-in English prompt suite. Written for voxeval (Apache-2.0).
+# Categories follow the failure modes TTS systems are known to have; `asr_reference`
+# gives the spoken form where text (URLs, symbols) cannot be transcribed literally.
+prompts:
+  # --- short / plain --------------------------------------------------------
+  - {id: en-short-01, category: short, text: "Hello, how are you today?"}
+  - {id: en-short-02, category: short, text: "The meeting starts at the top of the hour."}
+  - {id: en-short-03, category: short, text: "Please close the door behind you."}
+  - {id: en-short-04, category: short, text: "Thank you for waiting, I will be right with you."}
+  - {id: en-short-05, category: short, text: "It looks like rain this afternoon."}
+  - {id: en-short-06, category: short, text: "We shipped the update last night."}
+  - {id: en-short-07, category: short, text: "Could you repeat that one more time?"}
+  - {id: en-short-08, category: short, text: "Good morning, and welcome back."}
+  - {id: en-short-09, category: short, text: "The coffee is on the table."}
+  # --- long-form ------------------------------------------------------------
+  - id: en-long-01
+    category: long
+    text: "When the old lighthouse keeper climbed the spiral stairs for the last time, he paused at every landing, remembering the storms he had weathered, the ships he had guided to safety, and the quiet mornings when the sea was so still that the sky seemed to fall into it."
+  - id: en-long-02
+    category: long
+    text: "Our research team spent three years collecting data from forty villages, and although the early results were inconclusive, a careful reanalysis revealed a consistent pattern that changed how we think about water access, local health, and the economics of small farms."
+  - id: en-long-03
+    category: long
+    text: "To reset your password, open the settings page, choose the security tab, and select the option to change your password; you will receive an email with a link that expires after one hour, so be sure to complete the process before then."
+  - id: en-long-04
+    category: long
+    text: "The city council approved the new transit plan after a long debate, citing lower emissions, shorter commutes, and a projected increase in ridership, while a minority of members argued that the money would be better spent repairing existing roads."
+  - id: en-long-05
+    category: long
+    text: "Nobody expected the small bakery on the corner to become famous, yet within a year people were queuing around the block each morning, drawn by the smell of fresh bread and by a baker who remembered every customer's name and favourite loaf."
+  - id: en-long-06
+    category: long
+    text: "Photosynthesis converts light energy into chemical energy, allowing plants to build sugars from carbon dioxide and water, and releasing oxygen as a by-product that nearly every animal on Earth depends on to survive."
+  - id: en-long-07
+    category: long
+    text: "After the storm passed, the neighbours gathered in the street to help one another clear fallen branches, share what food they had left, and check on the elderly residents who lived alone at the end of the road."
+  - id: en-long-08
+    category: long
+    text: "If the build fails on the first attempt, do not panic: read the error log from the bottom up, check whether a dependency changed overnight, and only then consider reverting the most recent commit."
+  - id: en-long-09
+    category: long
+    text: "She had rehearsed the speech for weeks, but when she finally stepped up to the microphone and saw the faces looking back at her, every carefully prepared sentence dissolved, and she simply began by saying thank you."
+  # --- questions (rising intonation) ----------------------------------------
+  - {id: en-question-01, category: question, text: "Are you coming to the party on Saturday?"}
+  - {id: en-question-02, category: question, text: "Did you really think that was going to work?"}
+  - {id: en-question-03, category: question, text: "What time does the last train leave for the airport?"}
+  - {id: en-question-04, category: question, text: "Is this seat taken, or may I sit here?"}
+  - {id: en-question-05, category: question, text: "Why would anyone leave a perfectly good umbrella on the bus?"}
+  - {id: en-question-06, category: question, text: "Do you want tea, coffee, or something cold?"}
+  - {id: en-question-07, category: question, text: "Wait, you finished the whole report already?"}
+  - {id: en-question-08, category: question, text: "How many people did you say were coming?"}
+  - {id: en-question-09, category: question, text: "Which one is yours, the red bicycle or the blue one?"}
+  # --- numbers, dates, currency ----------------------------------------------
+  - {id: en-numbers-01, category: numbers, text: "The total comes to $1,249.99, including tax."}
+  - {id: en-numbers-02, category: numbers, text: "Your appointment is on March 14th, 2026, at 3:45 PM."}
+  - {id: en-numbers-03, category: numbers, text: "The population grew from 8,430 to 12,905 between 1990 and 2020."}
+  - {id: en-numbers-04, category: numbers, text: "Take 2.5 milligrams twice daily for 14 days."}
+  - {id: en-numbers-05, category: numbers, text: "The flight departs at 06:15 and lands at 21:40 local time."}
+  - {id: en-numbers-06, category: numbers, text: "She finished in 3rd place, just 0.07 seconds behind the winner."}
+  - {id: en-numbers-07, category: numbers, text: "Order number 48,213 contains 3 items weighing 12.4 kilograms in total."}
+  - {id: en-numbers-08, category: numbers, text: "Inflation fell to 3.2 percent, the lowest level since 2021."}
+  - {id: en-numbers-09, category: numbers, text: "The distance is 1,500 kilometres, or about 932 miles."}
+  # --- abbreviations / acronyms ----------------------------------------------
+  - {id: en-abbrev-01, category: abbreviations, text: "Dr. Smith works at the U.S. Department of Energy.", asr_reference: "Doctor Smith works at the U S Department of Energy."}
+  - {id: en-abbrev-02, category: abbreviations, text: "The NASA and ESA teams met at the UN headquarters.", asr_reference: "The NASA and ESA teams met at the U N headquarters."}
+  - {id: en-abbrev-03, category: abbreviations, text: "Please send the PDF to the HR department by 5 p.m.", asr_reference: "Please send the P D F to the H R department by 5 p m"}
+  - {id: en-abbrev-04, category: abbreviations, text: "The CEO and CFO will present the Q3 results.", asr_reference: "The C E O and C F O will present the Q 3 results."}
+  - {id: en-abbrev-05, category: abbreviations, text: "Mr. and Mrs. Jones live on Elm St. near the YMCA.", asr_reference: "Mister and Missus Jones live on Elm Street near the Y M C A."}
+  - {id: en-abbrev-06, category: abbreviations, text: "The API returns JSON over HTTPS.", asr_reference: "The A P I returns JSON over H T T P S."}
+  - {id: en-abbrev-07, category: abbreviations, text: "Her PhD in AI came from MIT.", asr_reference: "Her P H D in A I came from M I T."}
+  - {id: en-abbrev-08, category: abbreviations, text: "ASAP means as soon as possible.", asr_reference: "A S A P means as soon as possible."}
+  - {id: en-abbrev-09, category: abbreviations, text: "The FAQ is on page 12 of the PC manual.", asr_reference: "The F A Q is on page 12 of the P C manual."}
+  # --- URLs, emails, phone numbers -------------------------------------------
+  - {id: en-contact-01, category: contact, text: "Visit www.example.com for more details.", asr_reference: "Visit w w w dot example dot com for more details."}
+  - {id: en-contact-02, category: contact, text: "Email us at support@example.org.", asr_reference: "Email us at support at example dot org."}
+  - {id: en-contact-03, category: contact, text: "Call 555-0142 and ask for extension 27.", asr_reference: "Call 555 0142 and ask for extension 27."}
+  - {id: en-contact-04, category: contact, text: "The repository lives at github.com/example/project.", asr_reference: "The repository lives at github dot com slash example slash project."}
+  - {id: en-contact-05, category: contact, text: "Send the file to team-lead@example.net before noon.", asr_reference: "Send the file to team dash lead at example dot net before noon."}
+  - {id: en-contact-06, category: contact, text: "Our new number is (212) 555-0188.", asr_reference: "Our new number is 212 555 0188."}
+  - {id: en-contact-07, category: contact, text: "Go to docs.example.io/start and follow the guide.", asr_reference: "Go to docs dot example dot i o slash start and follow the guide."}
+  - {id: en-contact-08, category: contact, text: "Your tracking code is AB12-CD34-EF56.", asr_reference: "Your tracking code is A B 12 C D 34 E F 56."}
+  - {id: en-contact-09, category: contact, text: "Reach me at john.doe@example.com tomorrow.", asr_reference: "Reach me at john dot doe at example dot com tomorrow."}
+  # --- tongue twisters --------------------------------------------------------
+  - {id: en-twister-01, category: tongue_twister, text: "She sells seashells by the seashore."}
+  - {id: en-twister-02, category: tongue_twister, text: "Peter Piper picked a peck of pickled peppers."}
+  - {id: en-twister-03, category: tongue_twister, text: "How much wood would a woodchuck chuck if a woodchuck could chuck wood?"}
+  - {id: en-twister-04, category: tongue_twister, text: "Red lorry, yellow lorry, red lorry, yellow lorry."}
+  - {id: en-twister-05, category: tongue_twister, text: "Unique New York, you know you need unique New York."}
+  - {id: en-twister-06, category: tongue_twister, text: "Betty Botter bought some butter, but she said the butter's bitter."}
+  - {id: en-twister-07, category: tongue_twister, text: "The sixth sick sheikh's sixth sheep is sick."}
+  - {id: en-twister-08, category: tongue_twister, text: "Fresh fried fish, fish fresh fried, fried fish fresh, fish fried fresh."}
+  - {id: en-twister-09, category: tongue_twister, text: "A proper copper coffee pot."}
+  # --- foreign words and names ------------------------------------------------
+  - {id: en-foreign-01, category: foreign_words, text: "We ordered croissants and an espresso at a little café in Paris."}
+  - {id: en-foreign-02, category: foreign_words, text: "The kindergarten teacher spoke about Schadenfreude and wanderlust."}
+  - {id: en-foreign-03, category: foreign_words, text: "Dinner was sushi, followed by tiramisu and a glass of Chianti."}
+  - {id: en-foreign-04, category: foreign_words, text: "Professor Nguyen and Dr. Kowalczyk presented in Reykjavik."}
+  - {id: en-foreign-05, category: foreign_words, text: "The concierge said bonjour, then gracias, then auf Wiedersehen."}
+  - {id: en-foreign-06, category: foreign_words, text: "Their itinerary included Machu Picchu, Marrakech, and Chiang Mai."}
+  - {id: en-foreign-07, category: foreign_words, text: "She studied the haiku of Matsuo Basho and the poetry of Pablo Neruda."}
+  - {id: en-foreign-08, category: foreign_words, text: "It was déjà vu, a faux pas of the first order."}
+  - {id: en-foreign-09, category: foreign_words, text: "The ballet's finale, an encore of pirouettes, drew a standing ovation."}
+  # --- syntactic complexity ---------------------------------------------------
+  - {id: en-syntax-01, category: syntax, text: "The horse raced past the barn fell."}
+  - {id: en-syntax-02, category: syntax, text: "The man who the woman who the child saw met left early."}
+  - {id: en-syntax-03, category: syntax, text: "Although it was raining, and despite the forecast, they decided, against all advice, to go."}
+  - {id: en-syntax-04, category: syntax, text: "I saw her duck, and then she saw my saw."}
+  - {id: en-syntax-05, category: syntax, text: "What she wanted, what she needed, and what she got were three different things."}
+  - {id: en-syntax-06, category: syntax, text: "Buffalo buffalo Buffalo buffalo buffalo buffalo Buffalo buffalo."}
+  - {id: en-syntax-07, category: syntax, text: "Not only did he forget the tickets, but he also lost the map, which, frankly, did not help."}
+  - {id: en-syntax-08, category: syntax, text: "The old man the boats while the young carry the nets."}
+  - {id: en-syntax-09, category: syntax, text: "If you read this sentence carefully, you will notice that it, like many others, contains a clause within a clause."}
+  # --- expressive (style-tagged; adapters without style control ignore the tag) -
+  - {id: en-expr-01, category: expressive, style: happy, text: "We won! I cannot believe we actually won the whole thing!"}
+  - {id: en-expr-02, category: expressive, style: sad, text: "I really miss the old house, and the way it felt on quiet evenings."}
+  - {id: en-expr-03, category: expressive, style: angry, text: "I told you three times, and you still did not listen to a single word!"}
+  - {id: en-expr-04, category: expressive, style: calm, text: "Take a slow breath in, hold it gently, and let it go."}
+  - {id: en-expr-05, category: expressive, style: surprised, text: "Oh my goodness, you flew all the way here just to see me?"}
+  - {id: en-expr-06, category: expressive, style: fearful, text: "Did you hear that? Something is moving in the dark downstairs."}
+  - {id: en-expr-07, category: expressive, style: happy, text: "Happy birthday! I hope this year brings you everything you wished for."}
+  - {id: en-expr-08, category: expressive, style: sad, text: "She never came back, and the garden slowly grew quiet."}
+  - {id: en-expr-09, category: expressive, style: neutral, text: "The report is attached. Please review it and reply by Friday."}

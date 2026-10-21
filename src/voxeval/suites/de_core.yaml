@@ -1,0 +1,32 @@
+# Built-in German prompt suite (Apache-2.0).
+prompts:
+  - {id: de-short-01, category: short, text: "Hallo, wie geht es Ihnen heute?"}
+  - {id: de-short-02, category: short, text: "Bitte schließen Sie die Tür beim Hinausgehen."}
+  - {id: de-short-03, category: short, text: "Der Kaffee steht auf dem Tisch."}
+  - id: de-long-01
+    category: long
+    text: "Als der alte Leuchtturmwärter zum letzten Mal die Wendeltreppe hinaufstieg, blieb er auf jedem Absatz stehen und erinnerte sich an die Stürme, die er überstanden hatte, und an die Schiffe, die er sicher in den Hafen geleitet hatte."
+  - id: de-long-02
+    category: long
+    text: "Das Forschungsteam sammelte drei Jahre lang Daten in vierzig Dörfern, und obwohl die ersten Ergebnisse nicht eindeutig waren, zeigte eine sorgfältige Neuauswertung ein klares Muster beim Zugang zu Wasser."
+  - id: de-long-03
+    category: long
+    text: "Um Ihr Passwort zurückzusetzen, öffnen Sie die Einstellungen, wählen Sie den Reiter Sicherheit und folgen Sie dem Link in der E-Mail, der nach einer Stunde abläuft."
+  - {id: de-question-01, category: question, text: "Kommst du am Samstagabend zur Party?"}
+  - {id: de-question-02, category: question, text: "Wann fährt der letzte Zug zum Flughafen?"}
+  - {id: de-question-03, category: question, text: "Möchten Sie Tee, Kaffee oder etwas Kaltes trinken?"}
+  - {id: de-numbers-01, category: numbers, text: "Die Summe beträgt 1.249,99 Euro, inklusive Steuern."}
+  - {id: de-numbers-02, category: numbers, text: "Ihr Termin ist am 14. März 2026 um 15:45 Uhr."}
+  - {id: de-numbers-03, category: numbers, text: "Die Bevölkerung stieg von 8.430 auf 12.905 Einwohner zwischen 1990 und 2020."}
+  - {id: de-contact-01, category: contact, text: "Besuchen Sie www.beispiel.com für weitere Informationen.", asr_reference: "Besuchen Sie w w w Punkt beispiel Punkt com für weitere Informationen."}
+  - {id: de-contact-02, category: contact, text: "Schreiben Sie uns an support@beispiel.org.", asr_reference: "Schreiben Sie uns an support at beispiel Punkt org."}
+  - {id: de-contact-03, category: contact, text: "Rufen Sie 555 0142 an und fragen Sie nach Apparat 27.", asr_reference: "Rufen Sie 555 0142 an und fragen Sie nach Apparat 27."}
+  - {id: de-twister-01, category: tongue_twister, text: "Fischers Fritz fischt frische Fische, frische Fische fischt Fischers Fritz."}
+  - {id: de-twister-02, category: tongue_twister, text: "Blaukraut bleibt Blaukraut und Brautkleid bleibt Brautkleid."}
+  - {id: de-twister-03, category: tongue_twister, text: "Zwischen zwei Zwetschgenzweigen zwitschern zwei Schwalben."}
+  - {id: de-foreign-01, category: foreign_words, text: "Wir bestellten einen Cappuccino und ein Croissant in einem kleinen Café in Paris."}
+  - {id: de-foreign-02, category: foreign_words, text: "Zum Abendessen gab es Sushi, danach Tiramisu und ein Glas Chianti."}
+  - {id: de-foreign-03, category: foreign_words, text: "Ihre Reise führte nach Machu Picchu, Marrakesch und Chiang Mai."}
+  - {id: de-expr-01, category: expressive, style: happy, text: "Wir haben gewonnen! Ich kann nicht glauben, dass wir wirklich gewonnen haben!"}
+  - {id: de-expr-02, category: expressive, style: sad, text: "Ich vermisse das alte Haus und seine ruhigen Abende sehr."}
+  - {id: de-expr-03, category: expressive, style: angry, text: "Ich habe es dir dreimal gesagt, und du hörst immer noch nicht zu!"}

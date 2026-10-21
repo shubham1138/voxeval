@@ -1,0 +1,32 @@
+# Built-in Spanish prompt suite (Apache-2.0).
+prompts:
+  - {id: es-short-01, category: short, text: "Hola, ¿cómo estás hoy?"}
+  - {id: es-short-02, category: short, text: "Por favor, cierra la puerta al salir."}
+  - {id: es-short-03, category: short, text: "El café está sobre la mesa."}
+  - id: es-long-01
+    category: long
+    text: "Cuando el viejo farero subió por última vez la escalera de caracol, se detuvo en cada rellano para recordar las tormentas que había soportado y los barcos que había guiado hasta el puerto."
+  - id: es-long-02
+    category: long
+    text: "El equipo de investigación pasó tres años recopilando datos en cuarenta pueblos, y aunque los primeros resultados no fueron concluyentes, un análisis más detallado reveló un patrón claro sobre el acceso al agua."
+  - id: es-long-03
+    category: long
+    text: "Para restablecer tu contraseña, abre la página de configuración, elige la pestaña de seguridad y sigue el enlace que recibirás por correo, que caduca después de una hora."
+  - {id: es-question-01, category: question, text: "¿Vienes a la fiesta el sábado por la noche?"}
+  - {id: es-question-02, category: question, text: "¿A qué hora sale el último tren hacia el aeropuerto?"}
+  - {id: es-question-03, category: question, text: "¿Quieres té, café o algo frío para beber?"}
+  - {id: es-numbers-01, category: numbers, text: "El total es de 1.249,99 euros, con impuestos incluidos."}
+  - {id: es-numbers-02, category: numbers, text: "Su cita es el 14 de marzo de 2026 a las 15:45."}
+  - {id: es-numbers-03, category: numbers, text: "La población creció de 8.430 a 12.905 habitantes entre 1990 y 2020."}
+  - {id: es-contact-01, category: contact, text: "Visita www.ejemplo.com para más información.", asr_reference: "Visita w w w punto ejemplo punto com para más información."}
+  - {id: es-contact-02, category: contact, text: "Escríbenos a soporte@ejemplo.org.", asr_reference: "Escríbenos a soporte arroba ejemplo punto org."}
+  - {id: es-contact-03, category: contact, text: "Llama al 555 0142 y pregunta por la extensión 27.", asr_reference: "Llama al 555 0142 y pregunta por la extensión 27."}
+  - {id: es-twister-01, category: tongue_twister, text: "Tres tristes tigres tragaban trigo en un trigal."}
+  - {id: es-twister-02, category: tongue_twister, text: "El perro de San Roque no tiene rabo porque Ramón Ramírez se lo ha robado."}
+  - {id: es-twister-03, category: tongue_twister, text: "Pablito clavó un clavito en la calva de un calvito."}
+  - {id: es-foreign-01, category: foreign_words, text: "Pedimos un croissant y un espresso en un pequeño café de París."}
+  - {id: es-foreign-02, category: foreign_words, text: "La cena fue sushi, seguido de tiramisú y una copa de Chianti."}
+  - {id: es-foreign-03, category: foreign_words, text: "Su viaje incluía Machu Picchu, Marrakech y Chiang Mai."}
+  - {id: es-expr-01, category: expressive, style: happy, text: "¡Hemos ganado! ¡No me puedo creer que hayamos ganado de verdad!"}
+  - {id: es-expr-02, category: expressive, style: sad, text: "Echo mucho de menos la casa vieja y las tardes tranquilas."}
+  - {id: es-expr-03, category: expressive, style: angry, text: "¡Te lo he dicho tres veces y sigues sin escucharme!"}

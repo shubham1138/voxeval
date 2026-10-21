@@ -1,0 +1,32 @@
+# Built-in French prompt suite (Apache-2.0).
+prompts:
+  - {id: fr-short-01, category: short, text: "Bonjour, comment allez-vous aujourd'hui ?"}
+  - {id: fr-short-02, category: short, text: "Veuillez fermer la porte en sortant."}
+  - {id: fr-short-03, category: short, text: "Le café est sur la table."}
+  - id: fr-long-01
+    category: long
+    text: "Quand le vieux gardien de phare monta pour la dernière fois l'escalier en colimaçon, il s'arrêta à chaque palier pour se souvenir des tempêtes qu'il avait traversées et des navires qu'il avait guidés jusqu'au port."
+  - id: fr-long-02
+    category: long
+    text: "L'équipe de recherche a passé trois ans à recueillir des données dans quarante villages, et bien que les premiers résultats aient été peu concluants, une analyse plus attentive a révélé une tendance claire."
+  - id: fr-long-03
+    category: long
+    text: "Pour réinitialiser votre mot de passe, ouvrez la page des paramètres, choisissez l'onglet sécurité et suivez le lien reçu par courriel, qui expire au bout d'une heure."
+  - {id: fr-question-01, category: question, text: "Est-ce que tu viens à la fête samedi soir ?"}
+  - {id: fr-question-02, category: question, text: "À quelle heure part le dernier train pour l'aéroport ?"}
+  - {id: fr-question-03, category: question, text: "Voulez-vous du thé, du café ou quelque chose de frais ?"}
+  - {id: fr-numbers-01, category: numbers, text: "Le total s'élève à 1 249,99 euros, taxes comprises."}
+  - {id: fr-numbers-02, category: numbers, text: "Votre rendez-vous est le 14 mars 2026 à 15 h 45."}
+  - {id: fr-numbers-03, category: numbers, text: "La population est passée de 8 430 à 12 905 habitants entre 1990 et 2020."}
+  - {id: fr-contact-01, category: contact, text: "Rendez-vous sur www.exemple.com pour plus de détails.", asr_reference: "Rendez-vous sur w w w point exemple point com pour plus de détails."}
+  - {id: fr-contact-02, category: contact, text: "Écrivez-nous à assistance@exemple.org.", asr_reference: "Écrivez-nous à assistance arobase exemple point org."}
+  - {id: fr-contact-03, category: contact, text: "Appelez le 555 0142 et demandez le poste 27.", asr_reference: "Appelez le 555 0142 et demandez le poste 27."}
+  - {id: fr-twister-01, category: tongue_twister, text: "Les chaussettes de l'archiduchesse sont-elles sèches, archi-sèches ?"}
+  - {id: fr-twister-02, category: tongue_twister, text: "Un chasseur sachant chasser doit savoir chasser sans son chien."}
+  - {id: fr-twister-03, category: tongue_twister, text: "Si six scies scient six cyprès, six cent six scies scieront six cent six cyprès."}
+  - {id: fr-foreign-01, category: foreign_words, text: "Nous avons commandé un cappuccino et un cheesecake dans un petit café de Londres."}
+  - {id: fr-foreign-02, category: foreign_words, text: "Le dîner comprenait des sushis, suivis d'un tiramisu et d'un verre de Chianti."}
+  - {id: fr-foreign-03, category: foreign_words, text: "Leur itinéraire passait par Machu Picchu, Marrakech et Chiang Mai."}
+  - {id: fr-expr-01, category: expressive, style: happy, text: "On a gagné ! Je n'arrive pas à croire qu'on ait vraiment gagné !"}
+  - {id: fr-expr-02, category: expressive, style: sad, text: "La vieille maison me manque beaucoup, et ses soirées tranquilles aussi."}
+  - {id: fr-expr-03, category: expressive, style: angry, text: "Je te l'ai dit trois fois, et tu n'écoutes toujours pas !"}
